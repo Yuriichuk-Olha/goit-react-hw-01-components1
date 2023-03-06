@@ -3,8 +3,22 @@ import ReactDOM from 'react-dom/client';
 import { App } from 'components/App';
 import './index.css';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+import ProfileUser from 'components/Profile/ProfileUser';
+import user from 'components/Profile/user.json';
+
+import StatisticsList from 'components/Statistics/StatisticsList';
+import data from 'components/Statistics/data.json';
+//  <StatisticsList stats={data} />
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(
   <React.StrictMode>
-    <App />
+    <App>
+      
+    <ProfileUser users={user} />,
+    <StatisticsList title="Upload stats" stats={data} />,
+   
+
+    </App>
   </React.StrictMode>
 );
