@@ -9,14 +9,16 @@ import user from 'components/Profile/user.json';
 import StatisticsList from 'components/Statistics/StatisticsList';
 import data from 'components/Statistics/data.json';
 //  <StatisticsList stats={data} />
-
+// console.log(stats)
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     <App>
       
     <ProfileUser users={user} />,
-    <StatisticsList title="Upload stats" stats={data} />,
+    <StatisticsList title="Upload stats" stats={data} 
+    
+    />,
    
 
     </App>

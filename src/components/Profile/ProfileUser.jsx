@@ -1,7 +1,5 @@
 import Profile from "./Profile"
 
-
-
 export default function ProfileUser({users}) {
     console.log(users);
     return (

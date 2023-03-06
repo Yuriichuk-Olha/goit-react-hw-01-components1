@@ -1,30 +1,34 @@
+import PropTypes from 'prop-types';
 import Statistics from "./Statistics";
 
-export default function StatisticsList({stats}) {
-    console.log(stats);
+
+export default function StatisticsList({title, stats}) {
+   
     return (
         <div>
-                {stats.map(stats=>(
-                <li key={stats.id}> 
+            <ul title={title}>
+                {stats.map(stat=>(
+                <li key={stat.id}> 
                 
                 
                     <Statistics                                       
-                    id={stats.id}
-                    label={stats.label}
-                    percentage={stats.percentage}
+                    id={stat.id}
+                    label={stat.label}
+                    percentage={stat.percentage}
                     />
                 
                 </li>
                 )
                 )}
+                </ul>
         </div>
         )   
 };
 
-// StatisticsList.propTypes = {
-//     stats: PropTypes.arrayOf(
-//         PropTypes.shape({
-//             id: PropTypes.string.isRequired,
-//         }),
-//     ),
-// };
+StatisticsList.propTypes = {
+    stats: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string.isRequired,
+        }),
+    ),
+};
