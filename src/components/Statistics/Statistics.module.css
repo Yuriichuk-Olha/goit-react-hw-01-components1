@@ -2,5 +2,27 @@ ul{
     margin: 0;
 }
 .statistics{
+    width: 100px;
+}
+.statList{
+   display: flex;
+   justify-content: center;
+}
+
+.stat_list{
+    display: flex;
+}
+.item{
+    display: block;
+    text-align: center;
     width: 200px;
+}
+.label{
+display: block;
+font-size: 20px;
+
+}
+.percentage{
+display: block;
+font-size: 20px;
 }

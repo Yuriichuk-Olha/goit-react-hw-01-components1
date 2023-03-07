@@ -6,8 +6,7 @@ function getRandomHexColor() {
     return bgColor;
 }
 
-export default function Statistics({title, stats}){
-   
+export default function Statistics({title,label, percentage}){
 return (
     <section className={css.statistics}>
     {title && <h2 className={css.title}>{title}</h2>}
@@ -16,31 +15,31 @@ return (
     <li className={css.item} 
     style={{backgroundColor:getRandomHexColor()}}
     >
-        <span className={css.label}>{stats.label}</span>
-        <span className={css.percentage}>{stats.percentage}%</span>
+        <span className={css.label}>{label}</span>
+        <span className={css.percentage}>{percentage}%</span>
     </li>
     </ul>
     </section>
     )
-}
-
-// Statistics.propTypes = {
-//     title:PropTypes.string,
-//     stats:PropTypes.arrayOf(
-//         PropTypes.shape({
-//             id:PropTypes.string.isRequired,
-//             label:PropTypes.string.isRequired,
-//             percentage:PropTypes.number.isRequired,
-//         })
-//     )
-// }
+};
 
 Statistics.propTypes = {
     title:PropTypes.string,
-    stats:PropTypes.string,
-        
-    id:PropTypes.string.isRequired,
-    label:PropTypes.string.isRequired,
-    percentage:PropTypes.number.isRequired,
+    stats:PropTypes.arrayOf(
+        PropTypes.shape({
+            id:PropTypes.string.isRequired,
+            label:PropTypes.string.isRequired,
+            percentage:PropTypes.number.isRequired,
+        })
+    )
+};
+//=== Як правильно PropTypes те що вверху чи внизу?===========
 
-}
+// Statistics.propTypes = {
+//     title:PropTypes.string,
+//     stats:PropTypes.string,        
+//     id:PropTypes.string.isRequired,
+//     label:PropTypes.string.isRequired,
+//     percentage:PropTypes.number.isRequired,
+
+// }

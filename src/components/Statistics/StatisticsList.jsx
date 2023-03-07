@@ -1,16 +1,15 @@
 import PropTypes from 'prop-types';
 import Statistics from "./Statistics";
-
+import css from './Statistics.module.css';
 
 export default function StatisticsList({title, stats}) {
    
     return (
         <div>
-            <ul title={title}>
+            <ul className={css.statList} title={title}>
                 {stats.map(stat=>(
                 <li key={stat.id}> 
-                
-                
+            
                     <Statistics                                       
                     id={stat.id}
                     label={stat.label}
@@ -20,7 +19,7 @@ export default function StatisticsList({title, stats}) {
                 </li>
                 )
                 )}
-                </ul>
+            </ul>
         </div>
         )   
 };

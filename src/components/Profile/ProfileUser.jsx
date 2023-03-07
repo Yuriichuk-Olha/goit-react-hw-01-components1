@@ -1,7 +1,7 @@
+import PropTypes from 'prop-types';
 import Profile from "./Profile"
 
 export default function ProfileUser({users}) {
-    console.log(users);
     return (
     <div>
         {users.map(user=>(
@@ -24,3 +24,11 @@ export default function ProfileUser({users}) {
     </div>
     )
 }
+
+ProfileUser.propTypes = {
+    users: PropTypes.arrayOf(
+        PropTypes.shape({
+            username: PropTypes.string.isRequired,
+        }),
+    ),
+};

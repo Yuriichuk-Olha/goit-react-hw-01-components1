@@ -1,0 +1,26 @@
+.transaction{
+    width: 900px;
+    background-color: rgb(255, 248, 248);
+    margin: 0 auto;
+}
+.transaction_title{
+    background-color: rgb(52, 225, 225);
+    
+}
+table th,
+table td{
+    padding: 10px;
+    border: 1px solid #2a2a2a;
+}
+table {
+    border-collapse: collapse;
+  }
+.title{
+    font-size: 30px;
+    color:white;
+    
+}
+.list{
+    font-size: 15px;
+    text-align: center;
+}
